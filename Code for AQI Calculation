@@ -1,0 +1,68 @@
+print("Enter the concentrations of SO2,NO2,PM10 values below")
+SO2,NO2,PM10 = map(int,input().split())
+#Calculation of Sub Index of SO2
+
+if SO2 in range(0,41):
+  a=(((50-0)/(40-0))*(SO2-0))+0
+  print("Sub Index of SO2 is", a)
+elif SO2 in range(41,81):
+  a=(((100-51)/(80-41))*(SO2-41))+51
+  print("Sub Index of SO2 is", a)
+elif SO2 in range(81,381):
+  a=(((200-101)/(380-81))*(SO2-81))+101
+  print("Sub Index of SO2 is", a)
+elif SO2 in range(381,801):
+  a=(((300-201)/(800-381))*(SO2-381))+201
+  print("Sub Index of SO2 is", a)
+elif SO2 in range(801,1600):
+  a=(((400-301)/(1600-801))*(SO2-801))+301
+  print("Sub Index of SO2 is", a)
+else:
+  a=(((500-401)/(SO2-1600))*(SO2-1600))+401
+  print("Sub Index of SO2 is", a)
+
+#Calculation of Sub Index of NO2
+
+if NO2 in range(0,41):
+  b=(((50-0)/(40-0))*(NO2-0))+0
+  print("Sub Index of NO2 is", b)
+elif NO2 in range(41,80):
+  b=(((100-51)/(80-41))*(NO2-41))+51
+  print("Sub Index of NO2 is", b)
+elif NO2 in range(81,180):
+  b=(((200-101)/(180-81))*(NO2-81))+101
+  print("Sub Index of NO2 is", b)
+elif NO2 in range(181,280):
+  b=(((300-201)/(280-181))*(NO2-181))+201
+  print("Sub Index of NO2 is", b)
+elif NO2 in range(281,400):
+  b=(((400-301)/(400-281))*(NO2-281))+301
+  print("Sub Index of NO2 is", b)
+else:
+  b=(((500-401)/(NO2-400))*(NO2-400))+401
+  print("Sub Index of NO2 is", b)
+
+#Calculation of Sub Index of PM10
+
+if PM10 in range(0,51):
+  c=(((50-0)/(50-0))*(PM10-0))+0
+  print("Sub Index of PM10 is", c)
+elif PM10 in range(51,101):
+  c=(((100-51)/(100-51))*(PM10-51))+51
+  print("Sub Index of PM10 is", c)
+elif PM10 in range(101,251):
+  c=(((200-101)/(250-101))*(PM10-101))+101
+  print("Sub Index of PM10 is", c)
+elif PM10 in range(251,351):
+  c=(((300-201)/(350-251))*(PM10-251))+201
+  print("Sub Index of PM10 is", c)
+elif PM10 in range(351,401):
+  c=(((400-301)/(401-351))*(PM10-351))+301
+  print("Sub Index of PM10 is", c)
+else:
+  c=(((500-401)/(PM10-400))*(PM10-400))+401
+  print("Sub Index of NO2 is", c)
+
+
+aqi = max(round(a),round(b),round(c))
+print("AQI of the city:",aqi)
